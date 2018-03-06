@@ -1,7 +1,9 @@
 html, body {
-	background: linear-gradient(to bottom right, white, #F5F5F5);
+	/*background: linear-gradient(to bottom right, white, #F5F5F5);*/
+	background-color: #EFEFFC;
 	height: 100%;
 }
+
 .work-item {
 	border: 1px solid white;
 	margin: -1px 0 0 -1px;

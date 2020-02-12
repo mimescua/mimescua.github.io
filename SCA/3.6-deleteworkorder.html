@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1.3 getContractsCount</title>
+<title>3.6 deleteWorkorder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -524,19 +524,19 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>getContractsCount</h2>
+<h2>updateWorkorder</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getContractsCount</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">count</span><span>
+<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">deleteWorkorder</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"ck6ike3uk00rl0701m9uvnwxh"</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable-2">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"getContractsCount"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"count"</span><span>:</span><span> </span><span class="cm-number">2</span><span>
+</span><span>    </span><span class="cm-string cm-property">"deleteWorkorder"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"ck6ike3uk00rl0701m9uvnwxh"</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

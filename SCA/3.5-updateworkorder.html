@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>1.3 getContractsCount</title>
+<title>3.5 updateWorkorder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -524,19 +524,25 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>getContractsCount</h2>
+<h2>updateWorkorder</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getContractsCount</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">count</span><span>
+<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">updateWorkorder</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"ck6il13fs00s80701me2i0dhn"</span><span>,</span><span> </span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">geofences</span><span>:</span><span> </span><span>[</span><span class="cm-string">"ck6874lof00400701313q3ek2"</span><span>,</span><span class="cm-string">"ck68g93z7014q070105dkqzb3"</span><span>]</span><span>
+</span><span>    </span><span class="cm-variable">active</span><span>:</span><span> </span><span class="cm-atom">true</span><span>
+</span><span>    </span><span class="cm-variable">schedule</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>
+</span><span>    </span><span class="cm-variable">repeat</span><span>:</span><span> </span><span class="cm-atom">true</span><span>
+</span><span>    </span><span class="cm-variable">comment</span><span>:</span><span> </span><span class="cm-string">"First comments"</span><span>
+</span><span>  </span><span>}</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-property">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"getContractsCount"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"count"</span><span>:</span><span> </span><span class="cm-number">2</span><span>
+</span><span>    </span><span class="cm-string cm-property">"updateWorkorder"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"ck6il13fs00s80701me2i0dhn"</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

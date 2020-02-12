@@ -10,6 +10,14 @@
     font-family: 'Lato', sans-serif;
   }
 
+  .box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box>* {
+        flex: 1 1 160px;
+    }
+
   .container {
     display: block;
     position: relative;
@@ -105,185 +113,160 @@
   input[type=radio]:checked~label {
     color: #0DFF92;
   }
-
-  .signature {
-    margin: 10px auto;
-    padding: 10px 0;
-    width: 100%;
-  }
-
-  .signature p {
-    text-align: center;
-    font-family: Helvetica, Arial, Sans-Serif;
-    font-size: 0.85em;
-    color: #AAAAAA;
-  }
-
-  .signature .much-heart {
-    display: inline-block;
-    position: relative;
-    margin: 0 4px;
-    height: 10px;
-    width: 10px;
-    background: #AC1D3F;
-    border-radius: 4px;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .signature .much-heart::before,
-  .signature .much-heart::after {
-    display: block;
-    content: '';
-    position: absolute;
-    margin: auto;
-    height: 10px;
-    width: 10px;
-    border-radius: 5px;
-    background: #AC1D3F;
-    top: -4px;
-  }
-
-  .signature .much-heart::after {
-    bottom: 0;
-    top: auto;
-    left: -4px;
-  }
-
-  .signature a {
-    color: #AAAAAA;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-
-  /* Styles for alert... 
-by the way it is so weird when you look at your code a couple of years after you wrote it XD */
-
-  .alert {
-    box-sizing: border-box;
-    background-color: #BDFFE1;
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 300;
-    padding: 20px 40px;
-    color: #333;
-  }
-
-  .alert h2 {
-    font-size: 22px;
-    color: #232323;
-    margin-top: 0;
-  }
-
-  .alert p {
-    line-height: 1.6em;
-    font-size: 18px;
-  }
-
-  .alert a {
-    color: #232323;
-    font-weight: bold;
-  }
 </style>
 
 <body>
-  <div class="container">
-
-    <h2>Lista de endpoints:</h2>
-
-    <ul>
-      <li>
-        <input type="radio" id="f-option" name="selector"></input>
-        <label for="f-option"><a href="1.1-getcontracts.html">Listar contratos</a></label>
-        <div class="check">
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="s-option" name="selector">
-        <label for="s-option"><a href="1.2-getcontractbyid.html">Contrato por Id</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="1.3-getcontractscount.html">Conteo de contratos</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="1.4-createcontract.html">Crear contrato</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="1.5-updatecontract.html">Actualizar contrato</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="1.6-deletecontract.html">Borrar contrato</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="2.0-getgeofences.html">Listar geofences</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="2.1-getgeofencebyid.html">Geofence por Id</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="2.2-creategeofence.html">Crear geofence</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="2.3-updategeofence.html">Actualizar geofence</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-
-      <li>
-        <input type="radio" id="t-option" name="selector">
-        <label for="t-option"><a href="2.4-deletegeofence.html">Borrar geofence</a></label>
-        <div class="check">
-          <div class="inside"></div>
-        </div>
-      </li>
-    </ul>
+  <h1>SCA API Endpoints</h1>
+  <div class="box">
+    <div class="container">
+      <h2>Contracts:</h2>
+      <ul>
+        <li>
+          <input type="radio" id="a-option" name="selector"></input>
+          <label for="a-option"><a href="1.1-getcontracts.html">Listar contratos</a></label>
+          <div class="check">
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="b-option" name="selector">
+          <label for="b-option"><a href="1.2-getcontractbyid.html">Contrato por Id</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="c-option" name="selector">
+          <label for="c-option"><a href="1.3-getcontractscount.html">Conteo de contratos</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="d-option" name="selector">
+          <label for="d-option"><a href="1.4-createcontract.html">Crear contrato</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="e-option" name="selector">
+          <label for="e-option"><a href="1.5-updatecontract.html">Actualizar contrato</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="f-option" name="selector">
+          <label for="f-option"><a href="1.6-deletecontract.html">Borrar contrato</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <h2>Geofences:</h2>
+      <ul>
+        <li>
+          <input type="radio" id="g-option" name="selector">
+          <label for="g-option"><a href="2.0-getgeofences.html">Listar geofences</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="h-option" name="selector">
+          <label for="h-option"><a href="2.1-getgeofencebyid.html">Geofence por Id</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="i-option" name="selector">
+          <label for="i-option"><a href="2.2-creategeofence.html">Crear geofence</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="j-option" name="selector">
+          <label for="j-option"><a href="2.3-updategeofence.html">Actualizar geofence</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="k-option" name="selector">
+          <label for="k-option"><a href="2.4-deletegeofence.html">Borrar geofence (deletegeofence)</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <h2>Workorders:</h2>
+      <ul>
+        <li>
+          <input type="radio" id="l-option" name="selector">
+          <label for="l-option"><a href="3.1-getworkorders.html">Listar workorders</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="m-option" name="selector">
+          <label for="m-option"><a href="3.2-getworkorderbyid.html">Workorder por Id</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="n-option" name="selector">
+          <label for="n-option"><a href="3.3-getworkorderscount.html">Conteo de workorders</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="o-option" name="selector">
+          <label for="o-option"><a href="3.4-createworkorder.html">Crear workorder</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="p-option" name="selector">
+          <label for="p-option"><a href="3.5-updateworkorder.html">Actualizar workorder</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+  
+        <li>
+          <input type="radio" id="q-option" name="selector">
+          <label for="q-option"><a href="3.6-deleteworkorder.html">Borrar workorder</a></label>
+          <div class="check">
+            <div class="inside"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
+  
 </body>
 
 </html>

@@ -11,12 +11,13 @@
   }
 
   .box {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .box>* {
-        flex: 1 1 160px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box>* {
+    flex: 1 1 160px;
+  }
 
   .container {
     display: block;
@@ -122,237 +123,111 @@
   <div class="box">
     <div class="container">
       <h2>Contracts:</h2>
-      <ul>
-        <li>
-          <input type="radio" id="a-option" name="selector"></input>
-          <label for="a-option"><a href="1.1-getcontracts.html">1. Listar contratos</a></label>
-          <div class="check">
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="b-option" name="selector">
-          <label for="b-option"><a href="1.2-getcontractbyid.html">2. Contrato por Id</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="c-option" name="selector">
-          <label for="c-option"><a href="1.3-getcontractscount.html">3. Conteo de contratos</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="d-option" name="selector">
-          <label for="d-option"><a href="1.4-createcontract.html">4. Crear contrato</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="e-option" name="selector">
-          <label for="e-option"><a href="1.5-updatecontract.html">5. Actualizar contrato</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="f-option" name="selector">
-          <label for="f-option"><a href="1.6-deletecontract.html">6. Borrar contrato</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
+      <ul id="Contracts">
       </ul>
     </div>
     <div class="container">
       <h2>Geofences:</h2>
-      <ul>
-        <li>
-          <input type="radio" id="g-option" name="selector">
-          <label for="g-option"><a href="2.0-getgeofences.html">1. Listar geofences</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="h-option" name="selector">
-          <label for="h-option"><a href="2.1-getgeofencebyid.html">2. Geofence por Id</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="i-option" name="selector">
-          <label for="i-option"><a href="2.2-creategeofence.html">3. Crear geofence</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="j-option" name="selector">
-          <label for="j-option"><a href="2.3-updategeofence.html">4. Actualizar geofence</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="k-option" name="selector">
-          <label for="k-option"><a href="2.4-deletegeofence.html">5. Borrar geofence</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" id="k-option" name="selector">
-          <label for="k-option"><a href="2.5-getgeofencesbycontractid.html">6. Geofences por Id de contrato</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" id="k-option" name="selector">
-          <label for="k-option"><a href="2.6-getgeofencesbyworkorderid.html">7. Geofences por Id de workorder</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" id="k-option" name="selector">
-          <label for="k-option"><a href="2.7-getgeofencescountbycontractid.html">8. Conteo de geofences / contrato</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-
-        <li>
-          <input type="radio" id="k-option" name="selector">
-          <label for="k-option"><a href="2.8-getgeofencescountbyworkorderid.html">9. Conteo de geofences / workorder</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
+      <ul id="Geofences">
       </ul>
     </div>
     <div class="container">
       <h2>Workorders:</h2>
-      <ul>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="3.1-getworkorders.html">1. Listar workorders</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="m-option" name="selector">
-          <label for="m-option"><a href="3.2-getworkorderbyid.html">2. Workorder por Id</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="n-option" name="selector">
-          <label for="n-option"><a href="3.3-getworkorderscount.html">3. Conteo de workorders</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="o-option" name="selector">
-          <label for="o-option"><a href="3.4-createworkorder.html">4. Crear workorder</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="p-option" name="selector">
-          <label for="p-option"><a href="3.5-updateworkorder.html">5. Actualizar workorder</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-  
-        <li>
-          <input type="radio" id="q-option" name="selector">
-          <label for="q-option"><a href="3.6-deleteworkorder.html">6. Borrar workorder</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
+      <ul id="Workorders">
       </ul>
     </div>
     <div class="container">
       <h2>Users:</h2>
-      <ul>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="4.1-getusers.html">1. Listar users</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="4.2-getuserbyid">2. User por id</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="4.3-createuser.html">3. Crear user</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="4.4-updateuser.html">4. Update user</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
+      <ul id="Users">
       </ul>
     </div>
     <div class="container">
       <h2>Sites/Categories:</h2>
-      <ul>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="5.1-getsites.html">1. Listar sites</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
-        <li>
-          <input type="radio" id="l-option" name="selector">
-          <label for="l-option"><a href="5.2-getcategories.html">2. Listar categories</a></label>
-          <div class="check">
-            <div class="inside"></div>
-          </div>
-        </li>
+      <ul id="SitCategories">
       </ul>
     </div>
   </div>
-  
+  <script>
+    let contracts = [
+      { idfor: "c", ref: "1.1-getcontracts.html", name: "Listar contratos" },
+      { idfor: "c", ref: "1.2-getcontractbyid.html", name: "Contrato por Id" },
+      { idfor: "c", ref: "1.3-getcontractscount.html", name: "Conteo de contratos" },
+      { idfor: "c", ref: "1.4-createcontract.html", name: "Crear contrato" },
+      { idfor: "c", ref: "1.5-updatecontract.html", name: "Actualizar contrato" },
+      { idfor: "c", ref: "1.6-deletecontract.html", name: "Borrar contrato" },
+    ];
+    let geofences = [
+      { idfor: "g", ref: "2.0-getgeofences.html", name: "Listar geofences" },
+      { idfor: "g", ref: "2.1-getgeofencebyid.html", name: "Geofence por Id" },
+      { idfor: "g", ref: "2.2-creategeofence.html", name: "Crear geofence" },
+      { idfor: "g", ref: "2.3-updategeofence.html", name: "Actualizar geofence" },
+      { idfor: "g", ref: "2.4-deletegeofence.html", name: "Borrar geofence" },
+      { idfor: "g", ref: "2.5-getgeofencesbycontractid.html", name: "Geofences por Id de contrato" },
+      { idfor: "g", ref: "2.6-getgeofencesbyworkorderid.html", name: "Geofences por Id de workorder" },
+      { idfor: "g", ref: "2.7-getgeofencescountbycontractid.html", name: "Conteo de geofences / contrato" },
+      { idfor: "g", ref: "2.8-getgeofencescountbyworkorderid.html", name: "Conteo de geofences / workorder" },
+    ];
+    let workorders = [
+      { idfor: "w", ref: "3.1-getworkorders.html", name: "Listar workorders" },
+      { idfor: "w", ref: "3.2-getworkorderbyid.html", name: "Workorder por Id" },
+      { idfor: "w", ref: "3.3-getworkorderscount.html", name: "Conteo de workorders" },
+      { idfor: "w", ref: "3.4-createworkorder.html", name: "Crear workorder" },
+      { idfor: "w", ref: "3.5-updateworkorder.html", name: "Actualizar workorder" },
+      { idfor: "w", ref: "3.6-deleteworkorder.html", name: "Borrar workorder" },
+    ];
+    let users = [
+      { idfor: "u", ref: "4.1-getusers.html", name: "Listar users" },
+      { idfor: "u", ref: "4.2-getuserbyid.html", name: "User por id" },
+      { idfor: "u", ref: "4.3-createuser.html", name: "Crear user" },
+      { idfor: "u", ref: "4.4-updateuser.html", name: "Update user" },
+    ];
+    let sitCategories = [
+      { idfor: "sc", ref: "5.1-getsites.html", name: "Listar sites" },
+      { idfor: "sc", ref: "5.2-getcategories.html", name: "Listar categories" },
+    ];
+    //Contracts.innerHTML = `<li> ${viv.map(x => { return `<li>${x}</li>` })} </li>`
+      Contracts.innerHTML = contracts.map((x,i) => {
+        return `<li>
+                  <input type="radio" id="${x.idfor}${i+1}" name="selector">
+                      <label for="${x.idfor}${i+1}"><a href="${x.ref}">${i+1}. ${x.name}</a></label>
+                      <div class="check">
+                        <div class="inside"></div>
+                      </div>
+                </li>` })
+      Geofences.innerHTML = geofences.map((x,i) => {
+        return `<li>
+                  <input type="radio" id="${x.idfor}${i+1}" name="selector">
+                      <label for="${x.idfor}${i+1}"><a href="${x.ref}">${i+1}. ${x.name}</a></label>
+                      <div class="check">
+                        <div class="inside"></div>
+                      </div>
+                </li>` })
+      Workorders.innerHTML = workorders.map((x,i) => {
+        return `<li>
+                  <input type="radio" id="${x.idfor}${i+1}" name="selector">
+                      <label for="${x.idfor}${i+1}"><a href="${x.ref}">${i+1}. ${x.name}</a></label>
+                      <div class="check">
+                        <div class="inside"></div>
+                      </div>
+                </li>` })
+      Users.innerHTML = users.map((x,i) => {
+        return `<li>
+                  <input type="radio" id="${x.idfor}${i+1}" name="selector">
+                      <label for="${x.idfor}${i+1}"><a href="${x.ref}">${i+1}. ${x.name}</a></label>
+                      <div class="check">
+                        <div class="inside"></div>
+                      </div>
+                </li>` })
+      SitCategories.innerHTML = sitCategories.map((x,i) => {
+        return `<li>
+                  <input type="radio" id="${x.idfor}${i+1}" name="selector">
+                      <label for="${x.idfor}${i+1}"><a href="${x.ref}">${i+1}. ${x.name}</a></label>
+                      <div class="check">
+                        <div class="inside"></div>
+                      </div>
+                </li>` })
+
+  </script>
 </body>
 
 </html>

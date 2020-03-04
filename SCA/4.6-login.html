@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>4.3 createUser</title>
+<title>4.6 login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,18 +525,13 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>createUser</h2>
+<h2>login</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
-</span><span>  </span><span class="cm-property">createUser</span><span>(</span><span class="cm-def">data</span><span>:</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">login</span><span>(</span><span class="cm-def">data</span><span>:</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">email</span><span>:</span><span class="cm-string">"customer-1@mail.com"</span><span>
 </span><span>    </span><span class="cm-variable">password</span><span>:</span><span class="cm-string">"123456"</span><span>
-</span><span>    </span><span class="cm-variable">first_name</span><span>:</span><span class="cm-string">"customer-1"</span><span>
-</span><span>    </span><span class="cm-variable">last_name</span><span>:</span><span class="cm-string">"customer-1"</span><span>
-</span><span>    </span><span class="cm-variable">active</span><span>:</span><span> </span><span class="cm-atom">true</span><span>
-</span><span>    </span><span class="cm-variable">user_type</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>
-</span><span>  </span><span>}</span><span>)</span><span>
-</span><span>  </span><span>{</span><span>
+</span><span>  </span><span>}</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">token</span><span>
 </span><span>    </span><span class="cm-variable">user</span><span>{</span><span>
 </span><span>      </span><span class="cm-variable">id</span><span>
@@ -547,10 +542,10 @@ hr {
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"createUser"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"token"</span><span>:</span><span> </span><span class="cm-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgyMSwiaWF0IjoxNTgzMTg2NjIzfQ.2kQ_Ev_VIHKKY8V3Lw4u86uNLPep3Eq37Ka1rkHGIRk"</span><span>,</span><span>
+</span><span>    </span><span class="cm-string cm-property">"login"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"token"</span><span>:</span><span> </span><span class="cm-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNiwiaWF0IjoxNTgzMjQyNjE2fQ.VbdBjZFAxseOccewBFS_oVgH0j9l1FMuUSn7ovaPiZ4"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"user"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"821"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"206"</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>

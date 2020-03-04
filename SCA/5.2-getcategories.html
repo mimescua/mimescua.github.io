@@ -528,7 +528,7 @@ hr {
 <h2>getCategories</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getCategories</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getCategories</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"TECH"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">id</span><span>
 </span><span>    </span><span class="cm-variable">name</span><span>
 </span><span>    </span><span class="cm-variable">note</span><span>
@@ -540,53 +540,13 @@ hr {
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getCategories"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"ALDI"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
 </span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"All Sweep"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Hy Tech"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
 </span><span>      </span><span>}</span><span>,</span><span>
 </span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Carnegie Management"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"AZT Corporation"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"5"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Brixmor"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"A.Altman Co."</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"BWI Westwood"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"8"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Brightview"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"9"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Alexandria Square"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Cafaro"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"63"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Hy Tech Walmarts"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"note"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>]</span><span>

@@ -527,21 +527,23 @@ hr {
 <h2>getWorkordersByContractId</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getWorkordersByContractId</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"1"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">after</span><span>:</span><span class="cm-string">"2"</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">active_DESC</span><span>)</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable-2">id</span><span>
-</span><span>    </span><span class="cm-variable">contract</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable-2">id</span><span>
+</span><span>    </span><span class="cm-property">getWorkordersByContractId</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"1"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">after</span><span>:</span><span class="cm-string">"2"</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">active_ASC</span><span>)</span><span>{</span><span>
+</span><span>        </span><span class="cm-variable-2">id</span><span>
+</span><span>        </span><span class="cm-variable">active</span><span>
+</span><span>        </span><span class="cm-variable">schedule</span><span>
+</span><span>        </span><span class="cm-variable">repeat</span><span>
+</span><span>        </span><span class="cm-variable">comment</span><span>
+</span><span>        </span><span class="cm-variable">site</span><span>{</span><span>
+</span><span>          </span><span class="cm-variable-2">id</span><span>
+</span><span>        </span><span>}</span><span>
+</span><span>        </span><span class="cm-variable">contract</span><span>{</span><span>
+</span><span>          </span><span class="cm-variable-2">id</span><span>
+</span><span>        </span><span>}</span><span>
+</span><span>        </span><span class="cm-variable">geofences</span><span>{</span><span>
+</span><span>          </span><span class="cm-variable-2">id</span><span>
+</span><span>        </span><span>}</span><span>
+</span><span>        </span><span class="cm-variable">customer</span><span>
 </span><span>    </span><span>}</span><span>
-</span><span>    </span><span class="cm-variable">customer</span><span>
-</span><span>    </span><span class="cm-variable">site</span><span>
-</span><span>    </span><span class="cm-variable">geofences</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable-2">id</span><span>
-</span><span>    </span><span>}</span><span>
-</span><span>    </span><span class="cm-variable">active</span><span>
-</span><span>    </span><span class="cm-variable">schedule</span><span>
-</span><span>    </span><span class="cm-variable">repeat</span><span>
-</span><span>    </span><span class="cm-variable">comment</span><span>
-</span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
@@ -550,20 +552,22 @@ hr {
 </span><span>    </span><span class="cm-string cm-property">"getWorkordersByContractId"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>      </span><span>{</span><span>
 </span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"repeat"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"comment"</span><span>:</span><span> </span><span class="cm-string">"First comments"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"site"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"825"</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"contract"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
 </span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-string">"De Ville III"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"site"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction Attenuator"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"geofences"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>          </span><span>{</span><span>
 </span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
 </span><span>          </span><span>}</span><span>
 </span><span>        </span><span>]</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"repeat"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"comment"</span><span>:</span><span> </span><span class="cm-string">"First comments"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>]</span><span>
 </span><span>  </span><span>}</span><span>

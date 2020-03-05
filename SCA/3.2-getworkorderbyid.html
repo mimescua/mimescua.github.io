@@ -526,21 +526,24 @@ hr {
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>getWorkorderById</h2>
 <p>Query:</p>
+<p>ESTOY DEVOLVIENDO CUSTOMER=NULL, dejame arreglarlo, pero creo que no es problema para la consulta</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getWorkorderById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"1"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getWorkorderById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"4"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable-2">id</span><span>
-</span><span>    </span><span class="cm-variable">contract</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable-2">id</span><span>
-</span><span>    </span><span>}</span><span>
-</span><span>    </span><span class="cm-variable">customer</span><span>
-</span><span>    </span><span class="cm-variable">site</span><span>
-</span><span>    </span><span class="cm-variable">geofences</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable-2">id</span><span>
-</span><span>    </span><span>}</span><span>
 </span><span>    </span><span class="cm-variable">active</span><span>
 </span><span>    </span><span class="cm-variable">schedule</span><span>
 </span><span>    </span><span class="cm-variable">repeat</span><span>
 </span><span>    </span><span class="cm-variable">comment</span><span>
+</span><span>    </span><span class="cm-variable">site</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable-2">id</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">contract</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable-2">id</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">geofences</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable-2">id</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">customer</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
@@ -548,24 +551,23 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getWorkorderById"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"repeat"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"comment"</span><span>:</span><span> </span><span class="cm-string">"Second comments"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"site"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"825"</span><span>
+</span><span>      </span><span>}</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"contract"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
 </span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-string">"De Ville III"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"site"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction Attenuator"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"geofences"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"5"</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
 </span><span>        </span><span>}</span><span>
 </span><span>      </span><span>]</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"repeat"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"comment"</span><span>:</span><span> </span><span class="cm-string">"First commentssss"</span><span>
+</span><span>      </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

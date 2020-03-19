@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>4.7 updatePassword</title>
+<title>3.9 closeWorkorder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,26 +525,21 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>updatePassword</h2>
-<h3>NO REQUIERE HEADER CON TOKEN</h3>
+<h2>closeWorkorder</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
-</span><span>  </span><span class="cm-property">login</span><span>(</span><span class="cm-def">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">email</span><span>:</span><span class="cm-string">"customer-1@mail.com"</span><span>
-</span><span>    </span><span class="cm-variable">password</span><span>:</span><span class="cm-string">"123456"</span><span>
+</span><span>  </span><span class="cm-property">closeWorkorder</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"10"</span><span>,</span><span> </span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">comment</span><span>:</span><span class="cm-string">"CLOSED"</span><span>
 </span><span>  </span><span>}</span><span>)</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">token</span><span>
-</span><span>    </span><span class="cm-variable">user</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable">id</span><span>
-</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"updatePassword"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
+</span><span>    </span><span class="cm-string cm-property">"closeWorkorder"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10"</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

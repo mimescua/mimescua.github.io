@@ -159,11 +159,11 @@
       { idfor: "c", ref: "1.7-subscontract.html", name: "SUBSCRIPTION contrato x id" },
     ];
     let geofences = [
-      { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.0-getgeofences.html", name: "Listar geofences" },
+      /*{ idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.0-getgeofences.html", name: "Listar geofences" },
       { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.1-getgeofencebyid.html", name: "Geofence por Id" },
       { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.2-creategeofence.html", name: "Crear geofence" },
       { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.3-updategeofence.html", name: "Actualizar geofence" },
-      { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.4-deletegeofence.html", name: "Borrar geofence" },
+      { idfor: "g", style: "text-decoration:line-through;color:#993333", ref: "2.4-deletegeofence.html", name: "Borrar geofence" },*/
       { idfor: "g", ref: "2.5-getgeofencesbycontractid.html", name: "Geofences por Id de contrato" },
       { idfor: "g", ref: "2.6-getgeofencesbyworkorderid.html", name: "Geofences por Id de workorder" },
       { idfor: "g", ref: "2.7-getgeofencescountbycontractid.html", name: "Conteo de geofences / contrato" },
@@ -179,15 +179,18 @@
       { idfor: "w", ref: "3.6-deleteworkorder.html", name: "Borrar workorder" },
       { idfor: "w", ref: "3.7-getworkordersbycontractid.html", name: "Workorders por Id de contrato" },
       { idfor: "w", ref: "3.8-getworkorderscountbycontractid.html", name: "Conteo de workorders / contrato" },
+      { idfor: "w", style: "color:green", ref: "3.9-closeworkorder.html", name: "Cierre manual de Workorder" },
     ];
     let users = [
       { idfor: "u", ref: "4.1-getusers.html", name: "Listar users" },
       { idfor: "u", ref: "4.2-getuserbyid.html", name: "User por id" },
       { idfor: "u", ref: "4.3-createuser.html", name: "Crear user" },
       { idfor: "u", ref: "4.4-updateuser.html", name: "Update user" },
-      { idfor: "u", ref: "4.5-signin.html", name: "Login 1er paso" },
-      { idfor: "u", ref: "4.6-login.html", name: "Login 2do paso" },
-      { idfor: "u", ref: "4.7-updatepassword.html", name: "Actualizar password" },
+      { idfor: "u", style: "color:green", ref: "4.5-signin.html", name: "Login 1er paso" },
+      { idfor: "u", style: "color:green", ref: "4.6-login.html", name: "Login 2do paso" },
+      { idfor: "u", style: "color:green", ref: "4.7-updatepassword.html", name: "Actualizar password" },
+      { idfor: "u", style: "color:green", ref: "4.8-senduppasswordmail.html", name: "Enviar correo Recuperar Password" },
+      { idfor: "u", style: "color:green", ref: "4.9-validateuppasswordcode.html", name: "Validar código Recuperar Password" },
     ];
     let sitCategories = [
       { idfor: "sc", ref: "5.1-getsites.html", name: "Listar sites" },
@@ -205,8 +208,8 @@
                               </li>` })
       geofences.map((x,i) => {
         Geofences.innerHTML += `<li>
-                                  <input type="radio" id=${x.idfor}${i+1} name="selector">
-                                      <label for=${x.idfor}${i+1}><a style=${x.style} href=${x.ref}>${i+1}. ${x.name}</a></label>
+                                  <input type="radio" id=${x.idfor}${i+6} name="selector">
+                                      <label for=${x.idfor}${i+6}><a style=${x.style} href=${x.ref}>${i+6}. ${x.name}</a></label>
                                       <div class="check">
                                         <div class="inside"></div>
                                       </div>

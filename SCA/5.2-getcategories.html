@@ -528,8 +528,9 @@ hr {
 <h2>getCategories</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getCategories</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"TECH"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getCategories</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"TECH"</span><span>,</span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">name_ASC</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">id</span><span>
+</span><span>    </span><span class="cm-variable">category_id</span><span>
 </span><span>    </span><span class="cm-variable">name</span><span>
 </span><span>    </span><span class="cm-variable">note</span><span>
 </span><span>  </span><span>}</span><span>

@@ -521,11 +521,12 @@ hr {
   border-bottom-color: #eee;
 }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>getGeofences</h2>
-<p>Query (DEPRECATED):</p>
+<p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>    </span><span class="cm-property">getGeofences</span><span>{</span><span>
 </span><span>        </span><span class="cm-variable">id</span><span>
@@ -548,6 +549,7 @@ hr {
 </span><span>        </span><span class="cm-variable">length</span><span>
 </span><span>        </span><span class="cm-variable">radius</span><span>
 </span><span>        </span><span class="cm-variable">notes</span><span>
+</span><span>        </span><span class="cm-variable">color</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
@@ -601,7 +603,8 @@ hr {
 </span><span>        </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">83711.9312865734</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">1340.46868026503</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">"too much to say"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">"too much to say"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"color"</span><span>:</span><span> </span><span class="cm-number">1</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>]</span><span>
 </span><span>  </span><span>}</span><span>

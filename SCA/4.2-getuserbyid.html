@@ -528,7 +528,7 @@ hr {
 <h2>updateUser</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getUserById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"2"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getUserById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"244"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable-2">id</span><span>
 </span><span>    </span><span class="cm-variable">password</span><span>
 </span><span>    </span><span class="cm-variable">first_name</span><span>
@@ -547,6 +547,10 @@ hr {
 </span><span>      </span><span class="cm-variable-2">id</span><span>
 </span><span>      </span><span class="cm-variable">name</span><span>
 </span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">company</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable-2">id</span><span>
+</span><span>      </span><span class="cm-variable">name</span><span>
+</span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
@@ -554,60 +558,22 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getUserById"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"password"</span><span>:</span><span> </span><span class="cm-string">"123"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-string">"standard"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-string">"standard"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"244"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"password"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-string">"Graham"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-string">"Bingham"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"user_type"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"STANDARD"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"CUSTOMER"</span><span>
 </span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"email"</span><span>:</span><span> </span><span class="cm-string">"standard@sweepingcorp.com"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"email"</span><span>:</span><span> </span><span class="cm-string">"graham.bingham@astrumllc.com"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"sites"</span><span>:</span><span> </span><span>[</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Atlanta Attenuator"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction Sweeping"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction JetVac Truck"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction Attenuator"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"5"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Annapolis Junction Dump Truck"</span><span>
-</span><span>        </span><span>}</span><span>
-</span><span>      </span><span>]</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"categories"</span><span>:</span><span> </span><span>[</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"ALDI"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"All Sweep"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Carnegie Management"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"AZT Corporation"</span><span>
-</span><span>        </span><span>}</span><span>,</span><span>
-</span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"5"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Brixmor"</span><span>
-</span><span>        </span><span>}</span><span>
-</span><span>      </span><span>]</span><span>
+</span><span>      </span><span class="cm-string cm-property">"sites"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"categories"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"company"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"State Of Georgia"</span><span>
+</span><span>      </span><span>}</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

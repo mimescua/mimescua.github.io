@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>4.3 createUser</title>
+<title>5.9 getCustomers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,21 +525,16 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>createUser</h2>
+<h2>getCustomers</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
-</span><span>  </span><span class="cm-property">createUser</span><span>(</span><span class="cm-def">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">email</span><span>:</span><span class="cm-string">"customer-5@mail.com"</span><span>
-</span><span>    </span><span class="cm-variable">password</span><span>:</span><span class="cm-string">"123456"</span><span>
-</span><span>    </span><span class="cm-variable">first_name</span><span>:</span><span class="cm-string">"customer-5"</span><span>
-</span><span>    </span><span class="cm-variable">last_name</span><span>:</span><span class="cm-string">"5"</span><span>
-</span><span>    </span><span class="cm-variable">active</span><span>:</span><span> </span><span class="cm-atom">true</span><span>
-</span><span>    </span><span class="cm-variable">user_type</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>
-</span><span>    </span><span class="cm-variable">company</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
-</span><span>  </span><span>}</span><span>)</span><span>
-</span><span>  </span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">token</span><span>
-</span><span>    </span><span class="cm-variable">user</span><span>{</span><span>
+<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+</span><span>  </span><span class="cm-property">getCustomers</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"BALT"</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">id</span><span>
+</span><span>    </span><span class="cm-variable">name</span><span>
+</span><span>    </span><span class="cm-variable">users</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable">id</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">contracts</span><span>{</span><span>
 </span><span>      </span><span class="cm-variable">id</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
@@ -548,12 +543,24 @@ hr {
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"createUser"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"token"</span><span>:</span><span> </span><span class="cm-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjM1NiwiaWF0IjoxNTg1NzY5ODQ5fQ.uMT0twzEEyHQJeh7FbwyPiDP7d5iAT-MZkB0lms-9cQ"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"user"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"356"</span><span>
+</span><span>    </span><span class="cm-string cm-property">"getCustomers"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>      </span><span>{</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"State Of Baltimore"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"users"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"208"</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"209"</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"210"</span><span>
+</span><span>          </span><span>}</span><span>
+</span><span>        </span><span>]</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"contracts"</span><span>:</span><span> </span><span>[</span><span>]</span><span>
 </span><span>      </span><span>}</span><span>
-</span><span>    </span><span>}</span><span>
+</span><span>    </span><span>]</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>

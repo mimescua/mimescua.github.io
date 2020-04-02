@@ -521,13 +521,14 @@ hr {
   border-bottom-color: #eee;
 }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>getContracts</h2>
 <p>Query: AHORA LA BUSQUEDA(parámetro "query") es sobre category.name (category.name "contiene")</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>    </span><span class="cm-property">getContracts</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"Ville"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span> </span><span class="cm-variable">after</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">active_DESC</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-property">getContracts</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"VOLUSIA"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span> </span><span class="cm-variable">after</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">active_DESC</span><span>)</span><span>{</span><span>
 </span><span>        </span><span class="cm-variable">id</span><span>
 </span><span>        </span><span class="cm-variable">active</span><span>
 </span><span>        </span><span class="cm-variable">max_speed</span><span>
@@ -537,9 +538,7 @@ hr {
 </span><span>        </span><span class="cm-variable">vehicle_stopped</span><span>
 </span><span>        </span><span class="cm-variable">customer</span><span>{</span><span>
 </span><span>            </span><span class="cm-variable">id</span><span>
-</span><span>            </span><span class="cm-variable">user_id</span><span>
-</span><span>            </span><span class="cm-variable">first_name</span><span>
-</span><span>            </span><span class="cm-variable">last_name</span><span>
+</span><span>            </span><span class="cm-variable">name</span><span>
 </span><span>        </span><span>}</span><span>
 </span><span>        </span><span class="cm-variable">category</span><span>{</span><span>
 </span><span>            </span><span class="cm-variable">id</span><span>
@@ -580,7 +579,7 @@ hr {
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getContracts"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"100"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"min_broom"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
@@ -588,15 +587,13 @@ hr {
 </span><span>        </span><span class="cm-string cm-property">"pto_engage"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"vehicle_stopped"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"206"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"user_id"</span><span>:</span><span> </span><span class="cm-string">"0"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-string">"customer-1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-string">"customer-1"</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"State Of Georgia"</span><span>
 </span><span>        </span><span>}</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"2057"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Beaver Construction"</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"1978"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
 </span><span>        </span><span>}</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"site"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
@@ -605,51 +602,812 @@ hr {
 </span><span>        </span><span>}</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"geofences"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>          </span><span>{</span><span>
-</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Volusia County Road &#x26; Bridge"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1782"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"2129 West Oregon Ave"</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Beaver Construction"</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
 </span><span>            </span><span>}</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>              </span><span>{</span><span>
-</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">29.2466965222705</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">81.049028635025</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6404"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91853</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18343</span><span>
 </span><span>              </span><span>}</span><span>,</span><span>
 </span><span>              </span><span>{</span><span>
-</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">29.2435651633746</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">81.0473173856735</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6405"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91901</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18332</span><span>
 </span><span>              </span><span>}</span><span>,</span><span>
 </span><span>              </span><span>{</span><span>
-</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">29.2448149100293</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">81.0442596673965</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6406"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91893</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18283</span><span>
 </span><span>              </span><span>}</span><span>,</span><span>
 </span><span>              </span><span>{</span><span>
-</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">29.2479743138416</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">81.0459977388382</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6407"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91921</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18276</span><span>
 </span><span>              </span><span>}</span><span>,</span><span>
 </span><span>              </span><span>{</span><span>
-</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"5"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">29.2466965222705</span><span>,</span><span>
-</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">81.049028635025</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6408"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91941</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18415</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6409"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91866</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18429</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"6410"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17706"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91853</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18343</span><span>
 </span><span>              </span><span>}</span><span>
 </span><span>            </span><span>]</span><span>,</span><span>
-</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">83711.9312865734</span><span>,</span><span>
 </span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">1340.46868026503</span><span>,</span><span>
-</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">"too much to say"</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1862"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"BJ's-Oaks"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7079"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.1262</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45647</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7080"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12624</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45626</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7081"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12623</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.4561</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7082"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12634</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45515</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7083"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12641</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45465</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7084"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12648</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45463</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7085"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12773</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45482</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7086"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12805</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45558</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7087"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.1287</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45712</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7088"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12751</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45808</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7089"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12715</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45827</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7090"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12704</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45794</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7091"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12668</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45734</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7092"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.12634</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45656</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"12781"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.1262</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.45647</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">583465.986660481</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">3007.41863468588</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1863"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"BJ's=Warrington"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7093"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21942</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14141</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7094"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21791</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14281</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7095"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.2176</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14249</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7096"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21661</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14113</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7097"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21759</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.13994</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7098"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21866</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14002</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7099"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21869</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14024</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7100"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">40.21871</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.14039</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">472858.111679077</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">2710.64573296594</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1907"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Costo-Concordville"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7475"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88817</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53288</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7476"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88886</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53108</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7477"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89052</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53073</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7478"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89109</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53131</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7479"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89085</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53206</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7480"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89052</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53273</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7481"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88978</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53413</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7482"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88961</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53424</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7483"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88938</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53426</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7484"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88917</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53412</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7485"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88891</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53372</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7486"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88867</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53338</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7487"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88834</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53299</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7488"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88817</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53288</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">641300.767413855</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">3115.47090144803</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1908"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Costo-Concordville Test"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7489"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88887</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.5311</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7490"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.8882</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53292</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7491"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88833</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.533</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7492"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88848</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53318</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7493"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88867</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.5334</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7494"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88882</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53365</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7495"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88905</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53394</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7496"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.8892</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53412</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7497"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88936</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53429</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7498"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88954</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53433</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7499"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.8897</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.5342</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7500"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.88989</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53407</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7501"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89088</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53201</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7502"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89108</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53129</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"7503"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"18987"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.89053</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.53075</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">643289.747271299</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">3114.64952866506</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2142"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Quartermaster Plaza"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10037"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91439</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18769</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10038"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91552</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18744</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10039"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91722</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18707</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10040"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91706</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18546</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10041"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91682</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18521</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10042"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91675</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18496</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10043"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91835</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18461</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10044"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91857</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18623</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10045"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91868</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18681</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10046"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91878</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18722</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10047"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91895</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18761</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10048"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91917</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18797</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10049"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91938</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18822</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10050"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91985</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18866</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10051"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92002</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18891</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10052"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92002</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18919</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10053"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91751</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18974</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10054"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.9161</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18999</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10055"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91552</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18972</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10056"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91495</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18928</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10057"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91446</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18844</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10058"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17705"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91439</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18769</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">1538855.84618199</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">6189.15880299646</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2201"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"South Philadelphia"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10682"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91877</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18541</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10683"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91994</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18515</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10684"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91987</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18469</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10685"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92116</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.1844</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10686"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92129</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18559</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10687"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92247</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18534</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10688"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92256</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18537</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10689"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92225</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18688</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10690"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92021</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18732</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10691"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.92005</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18763</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10692"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91976</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18737</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10693"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91971</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18742</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10694"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91944</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18696</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10695"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91902</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18707</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10696"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91893</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18652</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10697"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17707"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.91877</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.18541</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">746032.010314226</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">4087.95025194064</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>          </span><span>}</span><span>,</span><span>
+</span><span>          </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2272"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Upland Sqaure Shopping Center"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>              </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"4"</span><span>,</span><span>
+</span><span>              </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>            </span><span>}</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"shape"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"points"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11821"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85712</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37695</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11822"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85723</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37634</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11823"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85723</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37487</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11824"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85718</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37477</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11825"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85728</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37446</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11826"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85734</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37429</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11827"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85748</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37412</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11828"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85763</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37403</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11829"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85789</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37392</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11830"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85826</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37377</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11831"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85899</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37625</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11832"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85881</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37637</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11833"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85802</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37669</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11834"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85781</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37678</span><span>
+</span><span>              </span><span>}</span><span>,</span><span>
+</span><span>              </span><span>{</span><span>
+</span><span>                </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"11835"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"geofence"</span><span>:</span><span> </span><span class="cm-string">"17929"</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"latitude"</span><span>:</span><span> </span><span class="cm-number">39.85712</span><span>,</span><span>
+</span><span>                </span><span class="cm-string cm-property">"longitude"</span><span>:</span><span> </span><span class="cm-operator">-</span><span class="cm-number">75.37695</span><span>
+</span><span>              </span><span>}</span><span>
+</span><span>            </span><span>]</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"subgroup"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"area"</span><span>:</span><span> </span><span class="cm-number">400757.555653572</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"length"</span><span>:</span><span> </span><span class="cm-number">2596.76618567304</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"radius"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"notes"</span><span>:</span><span> </span><span class="cm-string">""</span><span>
 </span><span>          </span><span>}</span><span>
 </span><span>        </span><span>]</span><span>
 </span><span>      </span><span>}</span><span>

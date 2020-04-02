@@ -529,12 +529,15 @@ hr {
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
 </span><span>  </span><span class="cm-property">updateContract</span><span>(</span><span>
-</span><span>    </span><span class="cm-def">id</span><span>:</span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>    </span><span class="cm-def">id</span><span>:</span><span class="cm-string">"99"</span><span>,</span><span>
 </span><span>    </span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
 </span><span>        </span><span class="cm-variable">active</span><span>:</span><span class="cm-atom">false</span><span>
-</span><span>        </span><span class="cm-variable">max_speed</span><span>:</span><span class="cm-atom">false</span><span>
-</span><span>        </span><span class="cm-variable">min_broom</span><span>:</span><span class="cm-atom">false</span><span>
-</span><span>        </span><span class="cm-variable">min_time</span><span>:</span><span class="cm-atom">false</span><span>
+</span><span>        </span><span class="cm-variable">max_speed</span><span>:</span><span class="cm-atom">true</span><span>
+</span><span>      </span><span class="cm-variable">req_speed</span><span>:</span><span class="cm-number">20</span><span>
+</span><span>        </span><span class="cm-variable">min_broom</span><span>:</span><span class="cm-atom">true</span><span>
+</span><span>      </span><span class="cm-variable">req_broom_time</span><span>:</span><span class="cm-number">20</span><span>
+</span><span>        </span><span class="cm-variable">min_time</span><span>:</span><span class="cm-atom">true</span><span>
+</span><span>      </span><span class="cm-variable">req_time</span><span>:</span><span class="cm-number">20</span><span>
 </span><span>        </span><span class="cm-variable">pto_engage</span><span>:</span><span class="cm-atom">true</span><span>
 </span><span>        </span><span class="cm-variable">vehicle_stopped</span><span>:</span><span class="cm-atom">false</span><span>
 </span><span>    </span><span>}</span><span>)</span><span>{</span><span>
@@ -546,7 +549,7 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"updateContract"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"99"</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

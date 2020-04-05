@@ -530,12 +530,16 @@ hr {
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
 </span><span>  </span><span class="cm-property">login</span><span>(</span><span class="cm-def">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">email</span><span>:</span><span class="cm-string">"customer-1@mail.com"</span><span>
+</span><span>    </span><span class="cm-variable">email</span><span>:</span><span class="cm-string">"dharper@sweepingcorp.com"</span><span>
 </span><span>    </span><span class="cm-variable">password</span><span>:</span><span class="cm-string">"123456"</span><span>
 </span><span>  </span><span>}</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">token</span><span>
+</span><span>    </span><span class="cm-variable">countdown</span><span>
 </span><span>    </span><span class="cm-variable">user</span><span>{</span><span>
 </span><span>      </span><span class="cm-variable">id</span><span>
+</span><span>      </span><span class="cm-variable">password</span><span>
+</span><span>        </span><span class="cm-variable">first_name</span><span>
+</span><span>        </span><span class="cm-variable">last_name</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
@@ -544,9 +548,13 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"login"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"token"</span><span>:</span><span> </span><span class="cm-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIwNiwiaWF0IjoxNTgzMjQyNjE2fQ.VbdBjZFAxseOccewBFS_oVgH0j9l1FMuUSn7ovaPiZ4"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"token"</span><span>:</span><span> </span><span class="cm-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTU4NjEyNjMzOCwiZXhwIjoxNTg2MTI2Mzc4fQ.GMYG4IpdMmWEG20t_m6r24r7bhKtfK1x5xSUH9GG7H4"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"countdown"</span><span>:</span><span> </span><span class="cm-number">3600000</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"user"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"206"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"password"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>

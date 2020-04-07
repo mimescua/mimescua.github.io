@@ -528,7 +528,10 @@ hr {
 <h2>getReportByWorkorderId</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getReportByWorkorderId</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"9"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getReportByWorkorderId</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"72"</span><span>,</span><span class="cm-variable">timezone</span><span>:</span><span class="cm-operator">-</span><span class="cm-number">5</span><span>,</span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">from</span><span>:</span><span class="cm-string">"2020-04-02T00:00:00.000Z"</span><span>
+</span><span>    </span><span class="cm-variable">to</span><span>:</span><span class="cm-string">"2020-04-02T19:03:43.195Z"</span><span>
+</span><span>  </span><span>}</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">summary</span><span>{</span><span>
 </span><span>        </span><span class="cm-variable">servicing_start</span><span>
 </span><span>        </span><span class="cm-variable">servicing_end</span><span>
@@ -542,8 +545,9 @@ hr {
 </span><span>        </span><span class="cm-variable">vehicle_stopped</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>    </span><span class="cm-variable">detail</span><span>{</span><span>
-</span><span>        </span><span class="cm-variable-2">id</span><span>
+</span><span>        </span><span class="cm-property">id</span><span>
 </span><span>        </span><span class="cm-variable">geofence_id</span><span>
+</span><span>        </span><span class="cm-variable">name</span><span>
 </span><span>        </span><span class="cm-variable">max_speed</span><span>
 </span><span>        </span><span class="cm-variable">min_broom</span><span>
 </span><span>        </span><span class="cm-variable">min_time</span><span>
@@ -560,11 +564,11 @@ hr {
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getReportByWorkorderId"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>      </span><span class="cm-string cm-property">"summary"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"servicing_start"</span><span>:</span><span> </span><span class="cm-string">"2020-02-04T00:00:00.000Z"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"servicing_end"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"contract"</span><span>:</span><span> </span><span class="cm-number">2057</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-string">"customer-1 customer-1"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"servicing_start"</span><span>:</span><span> </span><span class="cm-string">"2020-04-02T00:00:00.000Z"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"servicing_end"</span><span>:</span><span> </span><span class="cm-string">"2020-04-02T19:03:43.195Z"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"contract"</span><span>:</span><span> </span><span class="cm-number">1922</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"customer"</span><span>:</span><span> </span><span class="cm-string">"State Of Georgia"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-string">"0"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"min_broom"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"pto_engage"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
@@ -573,15 +577,16 @@ hr {
 </span><span>      </span><span>}</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"detail"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-string">"0"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"2651"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-string">"17333"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Home Depot Salem"</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"min_broom"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"pto_engage"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"broom_engage"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"vehicle_stopped"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"num_services"</span><span>:</span><span> </span><span class="cm-number">1</span><span>
+</span><span>          </span><span class="cm-string cm-property">"num_services"</span><span>:</span><span> </span><span class="cm-number">0</span><span>
 </span><span>        </span><span>}</span><span>
 </span><span>      </span><span>]</span><span>
 </span><span>    </span><span>}</span><span>

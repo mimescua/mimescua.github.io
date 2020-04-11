@@ -528,7 +528,7 @@ hr {
 <h2>updateUser</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getUserById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"244"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getUserById</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"206"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable-2">id</span><span>
 </span><span>    </span><span class="cm-variable">password</span><span>
 </span><span>    </span><span class="cm-variable">first_name</span><span>
@@ -551,6 +551,12 @@ hr {
 </span><span>      </span><span class="cm-variable-2">id</span><span>
 </span><span>      </span><span class="cm-variable">name</span><span>
 </span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">contracts</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable">category</span><span>{</span><span>
+</span><span>        </span><span class="cm-variable">category_id</span><span>
+</span><span>        </span><span class="cm-variable">name</span><span>
+</span><span>      </span><span>}</span><span>
+</span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
@@ -558,22 +564,48 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getUserById"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"244"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"206"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"password"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-string">"Graham"</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-string">"Bingham"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"first_name"</span><span>:</span><span> </span><span class="cm-string">"Customer-1"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"last_name"</span><span>:</span><span> </span><span class="cm-string">"Customer-1"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"user_type"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"CUSTOMER"</span><span>
 </span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"email"</span><span>:</span><span> </span><span class="cm-string">"graham.bingham@astrumllc.com"</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"email"</span><span>:</span><span> </span><span class="cm-string">"customer-1@mail.com"</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"sites"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"categories"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"company"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>,</span><span>
 </span><span>        </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"State Of Georgia"</span><span>
-</span><span>      </span><span>}</span><span>
+</span><span>      </span><span>}</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"contracts"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"1922"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Brightview"</span><span>
+</span><span>          </span><span>}</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"1978"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"MSI Stops"</span><span>
+</span><span>          </span><span>}</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"1897"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Brixmor"</span><span>
+</span><span>          </span><span>}</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>            </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-string">"1942"</span><span>,</span><span>
+</span><span>            </span><span class="cm-string cm-property">"name"</span><span>:</span><span> </span><span class="cm-string">"Eastland Plaza LP"</span><span>
+</span><span>          </span><span>}</span><span>
+</span><span>        </span><span>}</span><span>
+</span><span>      </span><span>]</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

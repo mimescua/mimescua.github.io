@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>4.4 updateUser</title>
+<title>5.13 deleteCustomer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,25 +525,19 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>updateUser</h2>
+<h2>deleteCustomer</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
-</span><span>  </span><span class="cm-property">updateUser</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"206"</span><span>,</span><span> </span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">password</span><span>:</span><span class="cm-string">"123456"</span><span>
-</span><span>    </span><span class="cm-variable">first_name</span><span>:</span><span class="cm-string">"customer-1"</span><span>
-</span><span>    </span><span class="cm-variable">last_name</span><span>:</span><span class="cm-string">"customer-1"</span><span>
-</span><span>    </span><span class="cm-variable">active</span><span>:</span><span> </span><span class="cm-atom">true</span><span>
-</span><span>    </span><span class="cm-variable">company</span><span>:</span><span> </span><span class="cm-string">"1"</span><span>
-</span><span>  </span><span>}</span><span>)</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">id</span><span>
+</span><span>  </span><span class="cm-property">deleteCustomer</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"3"</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable-2">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"updateUser"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"206"</span><span>
+</span><span>    </span><span class="cm-string cm-property">"deleteCustomer"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"3"</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>3.10 getReportByWorkorder</title>
+<title>1.9 getReportByContract</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,14 +525,18 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>getReportByWorkorder</h2>
+<h2>getReportByContract</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getReportByWorkorder</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"112"</span><span>,</span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">from</span><span>:</span><span class="cm-string">"2020-03-31T00:00:00.000Z"</span><span>,</span><span>
-</span><span>    </span><span class="cm-variable">to</span><span>:</span><span class="cm-string">"2020-04-14T17:12:09.481Z"</span><span>
+</span><span>  </span><span class="cm-property">getReportByContract</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"197"</span><span>,</span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">from</span><span>:</span><span class="cm-string">"2020-04-06T14:14:08.024Z"</span><span>,</span><span>
+</span><span>    </span><span class="cm-variable">to</span><span>:</span><span class="cm-string">"2020-04-15T00:11:15.064Z"</span><span>
 </span><span>  </span><span>}</span><span>)</span><span>
 </span><span>  </span><span>{</span><span>
+</span><span>        </span><span class="cm-variable">id</span><span>
+</span><span>        </span><span class="cm-variable">start_time</span><span>
+</span><span>        </span><span class="cm-variable">end_time</span><span>
+</span><span>        </span><span class="cm-variable">prc_id</span><span>
 </span><span>        </span><span class="cm-variable">geofence_id</span><span>
 </span><span>        </span><span class="cm-variable">geofence_vts_id</span><span>
 </span><span>        </span><span class="cm-variable">geofence_name</span><span>
@@ -570,49 +574,92 @@ hr {
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
-<p>Response:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"getReportByWorkorder"</span><span>:</span><span> </span><span>[</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2592</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">19179</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Gambrinus Steel Plant"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-number">35</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"min_broom_time"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">25</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"mov_start_qty"</span><span>:</span><span> </span><span class="cm-number">21</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">240</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"mov_stopped_qty"</span><span>:</span><span> </span><span class="cm-number">46</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"pto_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"pto_on_qty"</span><span>:</span><span> </span><span class="cm-number">4</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"broom_off_qty"</span><span>:</span><span> </span><span class="cm-number">13</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">8</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"service_qty"</span><span>:</span><span> </span><span class="cm-number">80</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"min_time_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"min_broom_time_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"max_speed_ok"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"mov_stopped_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"pto_on_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"broom_on_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_area"</span><span>:</span><span> </span><span class="cm-number">9947976.66116714</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"Canton,Perry Township,Stark County,OH"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">41</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1851</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"TIMKEN"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Canton, Perry Township, Stark County, OH"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">112</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">22</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"State Of Ohio"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"coordinates"</span><span>:</span><span> </span><span class="cm-string">"[[[40.76346,-81.43948],[40.76359,-81.43917],[40.76369,-81.43908],[40.76375,-81.43897],[40.76392,-81.43874],[40.76427,-81.4383],[40.7645,-81.43816],[40.76482,-81.4381],[40.76543,-81.43797],[40.76565,-81.43792],[40.76579,-81.43779],[40.76605,-81.43753],[40.76617,-81.43732],[40.76627,-81.43709],[40.76633,-81.43682],[40.76644,-81.43658],[40.76649,-81.4363],[40.76696,-81.43475],[40.76709,-81.43435],[40.7671,-81.43395],[40.76714,-81.43325],[40.76717,-81.43311],[40.76718,-81.43297],[40.76719,-81.43286],[40.76715,-81.43276],[40.76721,-81.43256],[40.76727,-81.43234],[40.76738,-81.4319],[40.76744,-81.43145],[40.7675,-81.43107],[40.7676,-81.43064],[40.7677,-81.43025],[40.76773,-81.42987],[40.76762,-81.42968],[40.76741,-81.42948],[40.76719,-81.42909],[40.76719,-81.42879],[40.76723,-81.42853],[40.76736,-81.42801],[40.76734,-81.42766],[40.76731,-81.42733],[40.76725,-81.42684],[40.76722,-81.4264],[40.76713,-81.42602],[40.76709,-81.42526],[40.76725,-81.42349],[40.76756,-81.42173],[40.76769,-81.42082],[40.76784,-81.41992],[40.76818,-81.41933],[40.76848,-81.41868],[40.77134,-81.41842],[40.77147,-81.41842],[40.77182,-81.41851],[40.77195,-81.41904],[40.77199,-81.42014],[40.77201,-81.42269],[40.77203,-81.42363],[40.77208,-81.42479],[40.77211,-81.4264],[40.77221,-81.42732],[40.77214,-81.42827],[40.77209,-81.42911],[40.7719,-81.43056],[40.77195,-81.4317],[40.77175,-81.43243],[40.77136,-81.43312],[40.77097,-81.4337],[40.77068,-81.43391],[40.77052,-81.4343],[40.7704,-81.43475],[40.77039,-81.43569],[40.77045,-81.43666],[40.77045,-81.43715],[40.77037,-81.43752],[40.77013,-81.43801],[40.76965,-81.43885],[40.76948,-81.43932],[40.7693,-81.43977],[40.76879,-81.44082],[40.7685,-81.44162],[40.76818,-81.44189],[40.76782,-81.442],[40.76735,-81.44207],[40.76691,-81.44172],[40.76663,-81.44142],[40.76655,-81.44065],[40.76679,-81.43986],[40.76694,-81.43917],[40.76346,-81.43948]]]"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"geofence_color"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"workorder_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-14 17:28:02.689"</span><span>,</span><span>
-</span><span>        </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-string">"Open"</span><span>
-</span><span>      </span><span>}</span><span>
-</span><span>    </span><span>]</span><span>
-</span><span>  </span><span>}</span><span>
-</span><span>}</span><span>
-</span></code></pre>
+<p>{
+"data": {
+"getReportByContract": [
+{
+"id": "126",
+"start_time": "2020-04-06T14:14:08.024Z",
+"end_time": "2020-04-15T00:11:15.064Z",
+"prc_id": 2107,
+"geofence_id": 2650,
+"geofence_vts_id": 17227,
+"geofence_name": "Home Depot Salem",
+"min_time": 4,
+"min_broom_time": -3,
+"max_speed": 11,
+"mov_start_qty": 1,
+"mov_continue_qty": 4,
+"mov_stopped_qty": 1,
+"pto_off_qty": 1,
+"pto_on_qty": 0,
+"broom_off_qty": 1,
+"broom_on_qty": 1,
+"service_qty": 1,
+"min_time_ok": false,
+"min_broom_time_ok": false,
+"max_speed_ok": null,
+"mov_stopped_ok": true,
+"pto_on_ok": false,
+"broom_on_ok": true,
+"geofence_area": 452974.522934914,
+"geofence_location": "Salem,Green Township,Mahoning County,OH",
+"category_id": 46,
+"category_vts_id": 1922,
+"category_name": "Brightview",
+"contract_id": null,
+"contract_location": "Twinsburg,Summit County,OH",
+"workorder_id": null,
+"customer_id": 1,
+"customer_name": "State Of Georgia",
+"coordinates": "[[[40.90383,-80.81988],[40.90376,-80.81975],[40.90373,-80.81945],[40.90374,-80.81894],[40.90377,-80.81865],[40.90423,-80.81857],[40.9044,-80.81868],[40.90456,-80.81874],[40.90466,-80.81861],[40.90467,-80.81844],[40.90461,-80.81825],[40.90461,-80.81789],[40.90459,-80.81708],[40.90458,-80.81608],[40.90408,-80.81605],[40.90384,-80.8161],[40.90302,-80.81605],[40.90292,-80.81648],[40.90285,-80.817],[40.90287,-80.81764],[40.90285,-80.8181],[40.90271,-80.81832],[40.90305,-80.81849],[40.90355,-80.81852],[40.90363,-80.81865],[40.90362,-80.81902],[40.90363,-80.8194],[40.90363,-80.81972],[40.9036,-80.81994],[40.90384,-80.81992]]]",
+"geofence_color": 3,
+"workorder_date": null,
+"workorder_status": null
+},
+{
+"id": "127",
+"start_time": "2020-04-06T14:14:08.024Z",
+"end_time": "2020-04-15T00:11:15.064Z",
+"prc_id": 2107,
+"geofence_id": 2651,
+"geofence_vts_id": 17333,
+"geofence_name": "Home Depot Salem",
+"min_time": null,
+"min_broom_time": null,
+"max_speed": 0,
+"mov_start_qty": 0,
+"mov_continue_qty": 0,
+"mov_stopped_qty": 0,
+"pto_off_qty": 0,
+"pto_on_qty": 0,
+"broom_off_qty": 0,
+"broom_on_qty": 0,
+"service_qty": 0,
+"min_time_ok": false,
+"min_broom_time_ok": false,
+"max_speed_ok": null,
+"mov_stopped_ok": false,
+"pto_on_ok": false,
+"broom_on_ok": false,
+"geofence_area": 455865.516515732,
+"geofence_location": "Salem,Green Township,Mahoning County,OH",
+"category_id": 46,
+"category_vts_id": 1922,
+"category_name": "Brightview",
+"contract_id": null,
+"contract_location": "Twinsburg,Summit County,OH",
+"workorder_id": null,
+"customer_id": 1,
+"customer_name": "State Of Georgia",
+"coordinates": "[[[40.9038,-80.81984],[40.90375,-80.8197],[40.90375,-80.81947],[40.90374,-80.81899],[40.90374,-80.8186],[40.9039,-80.81856],[40.90427,-80.81856],[40.90448,-80.81876],[40.90459,-80.81868],[40.90469,-80.81845],[40.90464,-80.81823],[40.90461,-80.81794],[40.9046,-80.81609],[40.90413,-80.81605],[40.90387,-80.81609],[40.90301,-80.81608],[40.90286,-80.81688],[40.90285,-80.81815],[40.90271,-80.8182],[40.90271,-80.81836],[40.90301,-80.81848],[40.90354,-80.81851],[40.90361,-80.81869],[40.9036,-80.81923],[40.90358,-80.81987]]]",
+"geofence_color": 3,
+"workorder_date": null,
+"workorder_status": null
+}
+]
+}
+}</p>
+<pre class="cm-s-default CodeMirror"><code></code></pre>
 </body>
 </html>

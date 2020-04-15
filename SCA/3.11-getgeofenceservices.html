@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>3.11 getGeofenceServices</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta keywords="">
+<style>
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+line-height: 1.5;
+color: #24292e;
+font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+font-size: 16px;
+line-height: 1.5;
+word-wrap: break-word;
+
+.dark, .solarizedDark {
+  color: #FFF;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border-style: none;
+}
+
+code,
+kbd,
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+input {
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  overflow: visible;
+}
+
+[type='checkbox'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+hr:before {
+  content: '';
+  display: table;
+}
+
+hr:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 0;
+}
+
+ol,
+ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ol ol ol,
+ol ul ol,
+ul ol ol,
+ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
+
+code,
+pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
+  font-size: 12px;
+}
+
+pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+&:before {
+  content: '';
+  display: table;
+}
+
+&:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+> :first-child {
+  margin-top: 0 !important;
+}
+
+> :last-child {
+  margin-bottom: 0 !important;
+}
+
+a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: 0.25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 0.25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1,
+h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.875em;
+}
+
+h6 {
+  color: #6a737d;
+  font-size: 0.85em;
+}
+
+ol,
+ul {
+  padding-left: 2em;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+li {
+  word-wrap: break-all;
+}
+
+li > p {
+  margin-top: 16px;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+table th {
+  font-weight: 600;
+}
+
+table td,
+table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+img[align='right'] {
+  padding-left: 20px;
+}
+
+img[align='left'] {
+  padding-right: 20px;
+}
+
+code {
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  word-wrap: normal;
+}
+
+pre > code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.highlight {
+  margin-bottom: 16px;
+}
+
+.highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.highlight pre,
+pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+:checked + .radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item + .task-list-item {
+  margin-top: 3px;
+}
+
+.task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+hr {
+  border-bottom-color: #eee;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+</head>
+<body>
+<p><a href="index.html">&#x3C;&#x3C; Index</a></p>
+<h2>getGeofenceServices</h2>
+<p>Query:</p>
+<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+</span><span>  </span><span class="cm-property">getGeofenceServices</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"2592"</span><span>,</span><span class="cm-variable">workorder</span><span>:</span><span class="cm-string">"112"</span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">table</span><span>{</span><span>
+</span><span>            </span><span class="cm-variable">geofence_id</span><span>
+</span><span>            </span><span class="cm-variable">geofence_vts_id</span><span>
+</span><span>            </span><span class="cm-variable">service_num</span><span>
+</span><span>            </span><span class="cm-variable">vehicle_id</span><span>
+</span><span>            </span><span class="cm-variable">start_date</span><span>
+</span><span>            </span><span class="cm-variable">end_date</span><span>
+</span><span>            </span><span class="cm-variable">min_time</span><span>
+</span><span>            </span><span class="cm-variable">min_broom_time</span><span>
+</span><span>            </span><span class="cm-variable">max_speed</span><span>
+</span><span>            </span><span class="cm-variable">mov_start_qty</span><span>
+</span><span>            </span><span class="cm-variable">mov_continue_qty</span><span>
+</span><span>            </span><span class="cm-variable">mov_stopped_qty</span><span>
+</span><span>            </span><span class="cm-variable">pto_off_qty</span><span>
+</span><span>            </span><span class="cm-variable">pto_on_qty</span><span>
+</span><span>            </span><span class="cm-variable">broom_off_qty</span><span>
+</span><span>            </span><span class="cm-variable">broom_on_qty</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">map</span><span>{</span><span>
+</span><span>      </span><span class="cm-variable">geofence_id</span><span>
+</span><span>            </span><span class="cm-variable">geofence_vts_id</span><span>
+</span><span>            </span><span class="cm-variable">geofence_name</span><span>
+</span><span>            </span><span class="cm-variable">min_time</span><span>
+</span><span>            </span><span class="cm-variable">min_broom_time</span><span>
+</span><span>            </span><span class="cm-variable">max_speed</span><span>
+</span><span>            </span><span class="cm-variable">mov_start_qty</span><span>
+</span><span>            </span><span class="cm-variable">mov_continue_qty</span><span>
+</span><span>            </span><span class="cm-variable">mov_stopped_qty</span><span>
+</span><span>            </span><span class="cm-variable">pto_off_qty</span><span>
+</span><span>            </span><span class="cm-variable">pto_on_qty</span><span>
+</span><span>            </span><span class="cm-variable">broom_off_qty</span><span>
+</span><span>            </span><span class="cm-variable">broom_on_qty</span><span>
+</span><span>            </span><span class="cm-variable">service_qty</span><span>
+</span><span>            </span><span class="cm-variable">min_time_ok</span><span>
+</span><span>            </span><span class="cm-variable">min_broom_time_ok</span><span>
+</span><span>            </span><span class="cm-variable">max_speed_ok</span><span>
+</span><span>            </span><span class="cm-variable">mov_stopped_ok</span><span>
+</span><span>            </span><span class="cm-variable">pto_on_ok</span><span>
+</span><span>            </span><span class="cm-variable">broom_on_ok</span><span>
+</span><span>            </span><span class="cm-variable">geofence_area</span><span>
+</span><span>            </span><span class="cm-variable">geofence_location</span><span>
+</span><span>            </span><span class="cm-variable">category_id</span><span>
+</span><span>            </span><span class="cm-variable">category_vts_id</span><span>
+</span><span>            </span><span class="cm-variable">category_name</span><span>
+</span><span>            </span><span class="cm-variable">contract_id</span><span>
+</span><span>            </span><span class="cm-variable">contract_location</span><span>
+</span><span>            </span><span class="cm-variable">workorder_id</span><span>
+</span><span>            </span><span class="cm-variable">customer_id</span><span>
+</span><span>            </span><span class="cm-variable">customer_name</span><span>
+</span><span>            </span><span class="cm-variable">coordinates</span><span>
+</span><span>            </span><span class="cm-variable">geofence_color</span><span>
+</span><span>            </span><span class="cm-variable">workorder_date</span><span>
+</span><span>            </span><span class="cm-variable">workorder_status</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>  </span><span>}</span><span>
+</span><span>}</span><span>
+</span></code></pre>
+<p>Response:</p>
+<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+</span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>    </span><span class="cm-string cm-property">"getGeofenceServices"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-string cm-property">"table"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"map"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2592</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">19179</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Gambrinus Steel Plant"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_broom_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_start_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_stopped_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"pto_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"pto_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"service_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_time_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_broom_time_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"max_speed_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_stopped_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"pto_on_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_on_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_area"</span><span>:</span><span> </span><span class="cm-number">9947976.66116714</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"Canton,Perry Township,Stark County,OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">41</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1851</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"TIMKEN"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Canton, Perry Township, Stark County, OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">112</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">22</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"State Of Ohio"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"coordinates"</span><span>:</span><span> </span><span class="cm-string">"[[[40.76346,-81.43948],[40.76359,-81.43917],[40.76369,-81.43908],[40.76375,-81.43897],[40.76392,-81.43874],[40.76427,-81.4383],[40.7645,-81.43816],[40.76482,-81.4381],[40.76543,-81.43797],[40.76565,-81.43792],[40.76579,-81.43779],[40.76605,-81.43753],[40.76617,-81.43732],[40.76627,-81.43709],[40.76633,-81.43682],[40.76644,-81.43658],[40.76649,-81.4363],[40.76696,-81.43475],[40.76709,-81.43435],[40.7671,-81.43395],[40.76714,-81.43325],[40.76717,-81.43311],[40.76718,-81.43297],[40.76719,-81.43286],[40.76715,-81.43276],[40.76721,-81.43256],[40.76727,-81.43234],[40.76738,-81.4319],[40.76744,-81.43145],[40.7675,-81.43107],[40.7676,-81.43064],[40.7677,-81.43025],[40.76773,-81.42987],[40.76762,-81.42968],[40.76741,-81.42948],[40.76719,-81.42909],[40.76719,-81.42879],[40.76723,-81.42853],[40.76736,-81.42801],[40.76734,-81.42766],[40.76731,-81.42733],[40.76725,-81.42684],[40.76722,-81.4264],[40.76713,-81.42602],[40.76709,-81.42526],[40.76725,-81.42349],[40.76756,-81.42173],[40.76769,-81.42082],[40.76784,-81.41992],[40.76818,-81.41933],[40.76848,-81.41868],[40.77134,-81.41842],[40.77147,-81.41842],[40.77182,-81.41851],[40.77195,-81.41904],[40.77199,-81.42014],[40.77201,-81.42269],[40.77203,-81.42363],[40.77208,-81.42479],[40.77211,-81.4264],[40.77221,-81.42732],[40.77214,-81.42827],[40.77209,-81.42911],[40.7719,-81.43056],[40.77195,-81.4317],[40.77175,-81.43243],[40.77136,-81.43312],[40.77097,-81.4337],[40.77068,-81.43391],[40.77052,-81.4343],[40.7704,-81.43475],[40.77039,-81.43569],[40.77045,-81.43666],[40.77045,-81.43715],[40.77037,-81.43752],[40.77013,-81.43801],[40.76965,-81.43885],[40.76948,-81.43932],[40.7693,-81.43977],[40.76879,-81.44082],[40.7685,-81.44162],[40.76818,-81.44189],[40.76782,-81.442],[40.76735,-81.44207],[40.76691,-81.44172],[40.76663,-81.44142],[40.76655,-81.44065],[40.76679,-81.43986],[40.76694,-81.43917],[40.76346,-81.43948]]]"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_color"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_date"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
+</span><span>        </span><span>}</span><span>
+</span><span>      </span><span>]</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>  </span><span>}</span><span>
+</span><span>}</span><span>
+</span></code></pre>
+</body>
+</html>

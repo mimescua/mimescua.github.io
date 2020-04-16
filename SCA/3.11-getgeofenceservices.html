@@ -528,7 +528,7 @@ hr {
 <h2>getGeofenceServices</h2>
 <p>Query:</p>
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getGeofenceServices</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"2592"</span><span>,</span><span class="cm-variable">workorder</span><span>:</span><span class="cm-string">"112"</span><span>)</span><span>{</span><span>
+</span><span>  </span><span class="cm-property">getGeofenceServices</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"2676"</span><span>,</span><span class="cm-variable">workorder</span><span>:</span><span class="cm-string">"75"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">table</span><span>{</span><span>
 </span><span>            </span><span class="cm-variable">geofence_id</span><span>
 </span><span>            </span><span class="cm-variable">geofence_vts_id</span><span>
@@ -548,7 +548,7 @@ hr {
 </span><span>            </span><span class="cm-variable">broom_on_qty</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>    </span><span class="cm-variable">map</span><span>{</span><span>
-</span><span>      </span><span class="cm-variable">geofence_id</span><span>
+</span><span>            </span><span class="cm-variable">geofence_id</span><span>
 </span><span>            </span><span class="cm-variable">geofence_vts_id</span><span>
 </span><span>            </span><span class="cm-variable">geofence_name</span><span>
 </span><span>            </span><span class="cm-variable">min_time</span><span>
@@ -590,45 +590,80 @@ hr {
 <pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getGeofenceServices"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"table"</span><span>:</span><span> </span><span>[</span><span>]</span><span>,</span><span>
-</span><span>      </span><span class="cm-string cm-property">"map"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>      </span><span class="cm-string cm-property">"table"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2592</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">19179</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Gambrinus Steel Plant"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2676</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17321</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"service_num"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"vehicle_id"</span><span>:</span><span> </span><span class="cm-number">138462</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"start_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-11T20:29:41.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"end_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-11T20:29:41.000Z"</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"min_broom_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">8</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"mov_start_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">2</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"mov_stopped_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"pto_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"pto_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"broom_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"service_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"min_time_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"min_broom_time_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"max_speed_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"mov_stopped_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"pto_on_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"broom_on_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_area"</span><span>:</span><span> </span><span class="cm-number">9947976.66116714</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"Canton,Perry Township,Stark County,OH"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">41</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1851</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"TIMKEN"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Canton, Perry Township, Stark County, OH"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">112</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">22</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"State Of Ohio"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"coordinates"</span><span>:</span><span> </span><span class="cm-string">"[[[40.76346,-81.43948],[40.76359,-81.43917],[40.76369,-81.43908],[40.76375,-81.43897],[40.76392,-81.43874],[40.76427,-81.4383],[40.7645,-81.43816],[40.76482,-81.4381],[40.76543,-81.43797],[40.76565,-81.43792],[40.76579,-81.43779],[40.76605,-81.43753],[40.76617,-81.43732],[40.76627,-81.43709],[40.76633,-81.43682],[40.76644,-81.43658],[40.76649,-81.4363],[40.76696,-81.43475],[40.76709,-81.43435],[40.7671,-81.43395],[40.76714,-81.43325],[40.76717,-81.43311],[40.76718,-81.43297],[40.76719,-81.43286],[40.76715,-81.43276],[40.76721,-81.43256],[40.76727,-81.43234],[40.76738,-81.4319],[40.76744,-81.43145],[40.7675,-81.43107],[40.7676,-81.43064],[40.7677,-81.43025],[40.76773,-81.42987],[40.76762,-81.42968],[40.76741,-81.42948],[40.76719,-81.42909],[40.76719,-81.42879],[40.76723,-81.42853],[40.76736,-81.42801],[40.76734,-81.42766],[40.76731,-81.42733],[40.76725,-81.42684],[40.76722,-81.4264],[40.76713,-81.42602],[40.76709,-81.42526],[40.76725,-81.42349],[40.76756,-81.42173],[40.76769,-81.42082],[40.76784,-81.41992],[40.76818,-81.41933],[40.76848,-81.41868],[40.77134,-81.41842],[40.77147,-81.41842],[40.77182,-81.41851],[40.77195,-81.41904],[40.77199,-81.42014],[40.77201,-81.42269],[40.77203,-81.42363],[40.77208,-81.42479],[40.77211,-81.4264],[40.77221,-81.42732],[40.77214,-81.42827],[40.77209,-81.42911],[40.7719,-81.43056],[40.77195,-81.4317],[40.77175,-81.43243],[40.77136,-81.43312],[40.77097,-81.4337],[40.77068,-81.43391],[40.77052,-81.4343],[40.7704,-81.43475],[40.77039,-81.43569],[40.77045,-81.43666],[40.77045,-81.43715],[40.77037,-81.43752],[40.77013,-81.43801],[40.76965,-81.43885],[40.76948,-81.43932],[40.7693,-81.43977],[40.76879,-81.44082],[40.7685,-81.44162],[40.76818,-81.44189],[40.76782,-81.442],[40.76735,-81.44207],[40.76691,-81.44172],[40.76663,-81.44142],[40.76655,-81.44065],[40.76679,-81.43986],[40.76694,-81.43917],[40.76346,-81.43948]]]"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_color"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_date"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2676</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17321</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"service_num"</span><span>:</span><span> </span><span class="cm-number">2</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"vehicle_id"</span><span>:</span><span> </span><span class="cm-number">138458</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"start_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-09T01:21:57.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"end_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-09T01:23:09.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"min_broom_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">17</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_start_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">5</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"mov_stopped_qty"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"pto_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"pto_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>
 </span><span>        </span><span>}</span><span>
-</span><span>      </span><span>]</span><span>
+</span><span>      </span><span>]</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"map"</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2676</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17321</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Lauren Hill"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"min_time"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"min_broom_time"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"max_speed"</span><span>:</span><span> </span><span class="cm-number">17</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"mov_start_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"mov_continue_qty"</span><span>:</span><span> </span><span class="cm-number">7</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"mov_stopped_qty"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"pto_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"pto_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"broom_off_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"broom_on_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"service_qty"</span><span>:</span><span> </span><span class="cm-number">2</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"min_time_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"min_broom_time_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"max_speed_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"mov_stopped_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"pto_on_ok"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"broom_on_ok"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_area"</span><span>:</span><span> </span><span class="cm-number">204486.408331871</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"North Olmsted,Cuyahoga County,OH"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">72</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1892</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Carnegie Management"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Medina Township, Medina County, OH"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">75</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">21</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Aventura Tech"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"coordinates"</span><span>:</span><span> </span><span class="cm-string">"[[[41.43002,-81.89101],[41.42936,-81.89058],[41.42962,-81.89004],[41.42993,-81.8902],[41.42993,-81.88983],[41.42952,-81.88941],[41.42953,-81.88915],[41.42965,-81.88891],[41.42984,-81.88891],[41.43006,-81.88916],[41.43037,-81.8887],[41.43096,-81.88935],[41.43098,-81.88945],[41.43098,-81.88966],[41.43066,-81.89011],[41.43038,-81.89054]]]"</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"geofence_color"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"workorder_date"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>        </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>
+</span><span>      </span><span>}</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>

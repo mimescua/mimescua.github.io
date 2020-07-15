@@ -527,49 +527,55 @@ hr {
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>getSumContracts</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-property">getSumContracts</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"VOLUSIA"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">category_name_DESC</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">total</span><span>
 </span><span>    </span><span class="cm-variable">result</span><span>{</span><span>
-</span><span>        </span><span class="cm-variable">contract_id</span><span>
-</span><span>    </span><span class="cm-variable">contract_location</span><span>
-</span><span>        </span><span class="cm-variable">category_vts_id</span><span>
-</span><span>        </span><span class="cm-variable">category_name</span><span>
-</span><span>        </span><span class="cm-variable">customer_name</span><span>
-</span><span>        </span><span class="cm-variable">geofence_qty</span><span>
-</span><span>        </span><span class="cm-variable">workorder_qty</span><span>
-</span><span>    </span><span class="cm-variable">creation_date</span><span>
-</span><span>    </span><span class="cm-variable">is_active</span><span>
+</span><span>            </span><span class="cm-variable">contract_id</span><span>
+</span><span>            </span><span class="cm-variable">contract_location</span><span>
+</span><span>            </span><span class="cm-variable">category_vts_id</span><span>
+</span><span>            </span><span class="cm-variable">category_name</span><span>
+</span><span>            </span><span class="cm-variable">customer_name</span><span>
+</span><span>            </span><span class="cm-variable">geofence_qty</span><span>
+</span><span>            </span><span class="cm-variable">workorder_qty</span><span>
+</span><span>            </span><span class="cm-variable">creation_date</span><span>
+</span><span>            </span><span class="cm-variable">broom_onoff</span><span>
+</span><span>            </span><span class="cm-variable">params_display</span><span>
+</span><span>            </span><span class="cm-variable">is_active</span><span>
 </span><span>    </span><span>}</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getSumContracts"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"total"</span><span>:</span><span> </span><span class="cm-number">44</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"total"</span><span>:</span><span> </span><span class="cm-number">7</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"result"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-string">"231"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Akron, Summit County, OH"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-string">"1979"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Louisville"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Customer Test 1"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_qty"</span><span>:</span><span> </span><span class="cm-number">3</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"creation_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-11T00:00:00.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-string">"289"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">" Mahoning County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-string">"1929"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Enviroscapes"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Gdot Test"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_qty"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_qty"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"creation_date"</span><span>:</span><span> </span><span class="cm-string">"2020-05-21T00:00:00.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_onoff"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"params_display"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"is_active"</span><span>:</span><span> </span><span class="cm-string">"Yes"</span><span>
 </span><span>        </span><span>}</span><span>,</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-string">"230"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Akron, Summit County, OH"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-string">"1916"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"K &#x26; F Properties, LLC"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Cleveland Sweeping"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-string">"294"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">" Summit County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-string">"1935"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Deville-Provident Property"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Alexandria Square"</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"geofence_qty"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"workorder_qty"</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"creation_date"</span><span>:</span><span> </span><span class="cm-string">"2020-04-11T00:00:00.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"creation_date"</span><span>:</span><span> </span><span class="cm-string">"2020-07-13T00:00:00.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"broom_onoff"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"params_display"</span><span>:</span><span> </span><span class="cm-atom">false</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"is_active"</span><span>:</span><span> </span><span class="cm-string">"Yes"</span><span>
 </span><span>        </span><span>}</span><span>
 </span><span>      </span><span>]</span><span>

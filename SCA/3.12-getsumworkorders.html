@@ -527,8 +527,8 @@ hr {
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>getSumWorkorders</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
-</span><span>  </span><span class="cm-property">getSumWorkorders</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"VOLUSIA"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">workorder_id_DESC</span><span>)</span><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
+</span><span>  </span><span class="cm-property">getSumWorkorders</span><span>(</span><span class="cm-def">query</span><span>:</span><span class="cm-string">"VOLUSIA"</span><span>,</span><span> </span><span class="cm-variable">first</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span> </span><span class="cm-variable">skip</span><span>:</span><span> </span><span class="cm-number">0</span><span>,</span><span> </span><span class="cm-variable">orderBy</span><span>:</span><span class="cm-variable">workorder_id_DESC</span><span>,</span><span> </span><span class="cm-variable">status</span><span>:</span><span> </span><span class="cm-variable">Open</span><span>,</span><span> </span><span class="cm-variable">contract</span><span>:</span><span class="cm-string">"3"</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">total</span><span>
 </span><span>    </span><span class="cm-variable">result</span><span>{</span><span>
 </span><span>            </span><span class="cm-variable">id</span><span>
@@ -562,38 +562,70 @@ hr {
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"getSumWorkorders"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>      </span><span class="cm-string cm-property">"total"</span><span>:</span><span> </span><span class="cm-number">1</span><span>,</span><span>
+</span><span>      </span><span class="cm-string cm-property">"total"</span><span>:</span><span> </span><span class="cm-number">10</span><span>,</span><span>
 </span><span>      </span><span class="cm-string cm-property">"result"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>        </span><span>{</span><span>
-</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-number">73</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"prc_id"</span><span>:</span><span> </span><span class="cm-number">5325</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">134</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-number">10607</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"prc_id"</span><span>:</span><span> </span><span class="cm-number">12014</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">196</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-string">"Open"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_location"</span><span>:</span><span> </span><span class="cm-string">"Macedonia,  Summit County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_location"</span><span>:</span><span> </span><span class="cm-string">" Mahoning County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_prev_workorder_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_reissue_comment"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"workorder_repeat"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-03-20T21:16:51.000Z"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_comments"</span><span>:</span><span> </span><span class="cm-string">"1st"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"workorder_created"</span><span>:</span><span> </span><span class="cm-string">"2020-03-20T19:01:58.013Z"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"site_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-number">268</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">"Macedonia,  Summit County,  OH"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">2</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"State Of Maryland"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-05-31T17:13:01.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_comments"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_created"</span><span>:</span><span> </span><span class="cm-string">"2020-05-21T17:13:00.581Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"site_id"</span><span>:</span><span> </span><span class="cm-number">1137</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-number">289</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">" Mahoning County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">77</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Gdot Test"</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"customer_active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2466</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17305</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Alexandria Square"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"Macedonia, Summit County, OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2987</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17267</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Waste Management"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"North Jackson, Jackson Township, Mahoning County, OH"</span><span>,</span><span>
 </span><span>          </span><span class="cm-string cm-property">"shape_type"</span><span>:</span><span> </span><span class="cm-string">"Polygon"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"shape_area"</span><span>:</span><span> </span><span class="cm-number">224965.719974637</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">51</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1932</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Alexandria Square"</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"geofence_workorder_ids"</span><span>:</span><span> </span><span class="cm-number">134</span><span>,</span><span>
-</span><span>          </span><span class="cm-string cm-property">"filter_here"</span><span>:</span><span> </span><span class="cm-string">"17305|ALEXANDRIA SQUARE|MACEDONIA,  SUMMIT COUNTY,  OH|STATE OF MARYLAND"</span><span>
+</span><span>          </span><span class="cm-string cm-property">"shape_area"</span><span>:</span><span> </span><span class="cm-number">79701.7862704992</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">63</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1929</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"Enviroscapes"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_workorder_ids"</span><span>:</span><span> </span><span class="cm-number">196</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"filter_here"</span><span>:</span><span> </span><span class="cm-string">"196|WASTE MANAGEMENT|1929|ENVIROSCAPES|GDOT TEST"</span><span>
+</span><span>        </span><span>}</span><span>,</span><span>
+</span><span>        </span><span>{</span><span>
+</span><span>          </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-number">10608</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"prc_id"</span><span>:</span><span> </span><span class="cm-number">12014</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_id"</span><span>:</span><span> </span><span class="cm-number">171</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_status"</span><span>:</span><span> </span><span class="cm-string">"Open"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_location"</span><span>:</span><span> </span><span class="cm-string">" Summit County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_prev_workorder_id"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_reissue_comment"</span><span>:</span><span> </span><span class="cm-atom">null</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_repeat"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_schedule"</span><span>:</span><span> </span><span class="cm-string">"2020-04-21T01:13:43.000Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_comments"</span><span>:</span><span> </span><span class="cm-string">""</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"workorder_created"</span><span>:</span><span> </span><span class="cm-string">"2020-04-30T01:13:43.854Z"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"site_id"</span><span>:</span><span> </span><span class="cm-number">66</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_id"</span><span>:</span><span> </span><span class="cm-number">275</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"contract_location"</span><span>:</span><span> </span><span class="cm-string">" Summit County,  OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_id"</span><span>:</span><span> </span><span class="cm-number">71</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_name"</span><span>:</span><span> </span><span class="cm-string">"Ohio Customers"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"customer_active"</span><span>:</span><span> </span><span class="cm-atom">true</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_id"</span><span>:</span><span> </span><span class="cm-number">2464</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_vts_id"</span><span>:</span><span> </span><span class="cm-number">17283</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_name"</span><span>:</span><span> </span><span class="cm-string">"Aldi Wadsworth"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_location"</span><span>:</span><span> </span><span class="cm-string">"Wadsworth, Medina County, OH"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"shape_type"</span><span>:</span><span> </span><span class="cm-string">"Polygon"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"shape_area"</span><span>:</span><span> </span><span class="cm-number">117177.276563525</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_id"</span><span>:</span><span> </span><span class="cm-number">35</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_vts_id"</span><span>:</span><span> </span><span class="cm-number">1866</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"category_name"</span><span>:</span><span> </span><span class="cm-string">"ALDI"</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"geofence_workorder_ids"</span><span>:</span><span> </span><span class="cm-number">171</span><span>,</span><span>
+</span><span>          </span><span class="cm-string cm-property">"filter_here"</span><span>:</span><span> </span><span class="cm-string">"171|ALDI WADSWORTH|1866|ALDI|OHIO CUSTOMERS"</span><span>
 </span><span>        </span><span>}</span><span>
 </span><span>      </span><span>]</span><span>
 </span><span>    </span><span>}</span><span>

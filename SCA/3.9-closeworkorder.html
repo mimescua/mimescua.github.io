@@ -527,16 +527,17 @@ hr {
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
 <h2>closeWorkorder</h2>
 <p>Query:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
 </span><span>  </span><span class="cm-property">closeWorkorder</span><span>(</span><span class="cm-def">id</span><span>:</span><span class="cm-string">"10"</span><span>,</span><span> </span><span class="cm-variable">data</span><span>:</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">comment</span><span>:</span><span class="cm-string">"CLOSED"</span><span>
+</span><span>    </span><span class="cm-variable">comment</span><span>:</span><span class="cm-string">"CLOSED"</span><span>,</span><span>   </span><span>
+</span><span>    </span><span class="cm-variable">definitive_close</span><span>:</span><span> </span><span class="cm-string">"0"</span><span>
 </span><span>  </span><span>}</span><span>)</span><span>{</span><span>
 </span><span>    </span><span class="cm-variable">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
-<pre class="cm-s-default CodeMirror language-json"><code class="language-json"><span>{</span><span>
+<pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>    </span><span class="cm-string cm-property">"closeWorkorder"</span><span>:</span><span> </span><span>{</span><span>
 </span><span>      </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"10"</span><span>

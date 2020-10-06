@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>5.6 renewGeofencestock</title>
+<title>2.12 postGeofencesFromGeojson</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta keywords="">
 <style>
@@ -525,33 +525,51 @@ hr {
 </head>
 <body>
 <p><a href="index.html">&#x3C;&#x3C; Index</a></p>
-<h2>renewGeofencestock</h2>
-<h1>Si type=SINGLE, debe especificarse "CategoryId"</h1>
-<p>Query:</p>
+<h2>postGeofencesFromGeojson</h2>
+<h1>Si hay "categoryId", ya no se tomara en cuenta "category" ni "userdIds"</h1>
 <pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span class="cm-variable">mutation</span><span>{</span><span>
-</span><span>  </span><span class="cm-property">renewGeofencestock</span><span>(</span><span class="cm-def">type</span><span>:</span><span> </span><span class="cm-variable">SINGLE</span><span>,</span><span> </span><span class="cm-variable">CategoryId</span><span>:</span><span> </span><span class="cm-number">2520</span><span>)</span><span>{</span><span>
-</span><span>    </span><span class="cm-variable">id</span><span>
+</span><span>  </span><span class="cm-property">postGeofencesFromGeojson</span><span>(</span><span>
+</span><span>    </span><span class="cm-def">data</span><span>:</span><span>{</span><span>
+</span><span>    </span><span class="cm-variable">type</span><span>:</span><span> </span><span class="cm-string">"FeatureCollection"</span><span>
+</span><span>    </span><span class="cm-variable">crs</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-variable">type</span><span>:</span><span> </span><span class="cm-string">"name"</span><span>
+</span><span>      </span><span class="cm-variable">properties</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-variable">name</span><span>:</span><span> </span><span class="cm-string">"wgs84"</span><span>
+</span><span>      </span><span>}</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">features</span><span>:</span><span> </span><span>[</span><span>{</span><span>
+</span><span>      </span><span class="cm-property">type</span><span>:</span><span> </span><span class="cm-string">"Feature"</span><span>
+</span><span>      </span><span class="cm-variable">properties</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-variable">id</span><span>:</span><span> </span><span class="cm-number">0</span><span>
+</span><span>        </span><span class="cm-variable">name</span><span>:</span><span> </span><span class="cm-string">"SCA_DEV_TEST_01"</span><span>
+</span><span>        </span><span class="cm-variable">categoryId</span><span>:</span><span> </span><span class="cm-number">2520</span><span>
+</span><span>        </span><span class="cm-variable">color</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>        </span><span class="cm-variable">notes</span><span>:</span><span> </span><span class="cm-string">""</span><span>
+</span><span>      </span><span>}</span><span>
+</span><span>      </span><span class="cm-variable">geometry</span><span>:</span><span> </span><span>{</span><span>
+</span><span>        </span><span class="cm-variable">type</span><span>:</span><span> </span><span class="cm-string">"Polygon"</span><span>
+</span><span>        </span><span class="cm-variable">coordinates</span><span>:</span><span> </span><span>[</span><span>[</span><span>[</span><span class="cm-operator">-</span><span class="cm-number">75.7672119140625</span><span>,</span><span class="cm-operator">-</span><span class="cm-number">14.221788628397585</span><span>]</span><span>,</span><span>[</span><span class="cm-operator">-</span><span class="cm-number">75.1849365234375</span><span>,</span><span class="cm-operator">-</span><span class="cm-number">14.221788628397585</span><span>]</span><span>,</span><span>[</span><span class="cm-operator">-</span><span class="cm-number">75.1849365234375</span><span>,</span><span class="cm-operator">-</span><span class="cm-number">14.003366516945917</span><span>]</span><span>,</span><span>[</span><span class="cm-operator">-</span><span class="cm-number">75.7672119140625</span><span>,</span><span class="cm-operator">-</span><span class="cm-number">14.003366516945917</span><span>]</span><span>,</span><span>[</span><span class="cm-operator">-</span><span class="cm-number">75.7672119140625</span><span>,</span><span class="cm-operator">-</span><span class="cm-number">14.221788628397585</span><span>]</span><span>]</span><span>]</span><span>
+</span><span>      </span><span>}</span><span>
+</span><span>    </span><span>}</span><span>]</span><span>
+</span><span>    </span><span>}</span><span>,</span><span>
+</span><span>    </span><span class="cm-variable">categoryId</span><span>:</span><span> </span><span class="cm-number">2520</span><span>,</span><span>
+</span><span>    </span><span class="cm-variable">category</span><span>:</span><span> </span><span>{</span><span>
+</span><span>      </span><span class="cm-property">name</span><span>:</span><span> </span><span class="cm-string">"SCA_DEV_TEST_01"</span><span>
+</span><span>      </span><span class="cm-variable">color</span><span>:</span><span> </span><span class="cm-string">"80FFFFFF"</span><span>
+</span><span>      </span><span class="cm-variable">notes</span><span>:</span><span> </span><span class="cm-string">"Just a developing test!"</span><span>
+</span><span>    </span><span>}</span><span>
+</span><span>    </span><span class="cm-variable">userIds</span><span>:</span><span> </span><span>[</span><span class="cm-number">15</span><span>,</span><span class="cm-number">1548</span><span>]</span><span>
+</span><span>  </span><span>)</span><span>{</span><span>
+</span><span>    </span><span class="cm-property">id</span><span>
 </span><span>  </span><span>}</span><span>
 </span><span>}</span><span>
 </span></code></pre>
 <p>Response:</p>
 <pre class="cm-s-material-darker CodeMirror language-json"><code class="language-json"><span>{</span><span>
 </span><span>  </span><span class="cm-string cm-property">"data"</span><span>:</span><span> </span><span>{</span><span>
-</span><span>    </span><span class="cm-string cm-property">"renewGeofencestock"</span><span>:</span><span> </span><span>[</span><span>
+</span><span>    </span><span class="cm-string cm-property">"postGeofencesFromGeojson"</span><span>:</span><span> </span><span>[</span><span>
 </span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"28"</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"29"</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"30"</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"31"</span><span>
-</span><span>      </span><span>}</span><span>,</span><span>
-</span><span>      </span><span>{</span><span>
-</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"32"</span><span>
+</span><span>        </span><span class="cm-string cm-property">"id"</span><span>:</span><span> </span><span class="cm-string">"44076"</span><span>
 </span><span>      </span><span>}</span><span>
 </span><span>    </span><span>]</span><span>
 </span><span>  </span><span>}</span><span>
